@@ -62,6 +62,17 @@ class Heap(object):
                     index = childSwap
                 else: 
                     break
+
+        def heapSort(self): 
+            for i in range(0, self.currentPosition):
+                temp = self.heap[0]
+                print("%d" % temp)
+                self.heap[0] = self.heap[self.currentPosition - i ]
+                self.heap[self.currentPosition-i]=temp
+                self.fixDown(0, self.currentPosition-i-1)
+
+
+        
         
 
 
